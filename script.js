@@ -1,16 +1,13 @@
-const huiswerkMaken = function(vak, callback) {
-    console.log(`Ok, ok, ik ga nu mijn ${vak} huiswerk maken`);
+const sum = function(...numbers) {
+    return numbers.reduce(function(prev, current) {
+        return prev + current;
+    });
+};
+console.log(sum(1, 2, 3, 4, 5, 6));
 
-    callback();
+//2
+const sum1 = function(num1, num2, num3) {
+    return num1 + num2 + num3;
 };
-const klaarMetHuiswerk = function() {
-    console.log("Kijk Paps/Mams, ik ben klaar met mijn huiswerk!");
-};
-huiswerkMaken("wiskunde", klaarMetHuiswerk);
-
-const huiswerkMaken = function(vak, callback) {
-    console.log(`Ok, ok, ik ga nu mijn ${vak} huiswerk maken`);
-    setTimeout(function() {
-        callback();
-    }, 10000);
-};
+const cijfers = [1, 2, 3];
+console.log(sum1(...cijfers));
